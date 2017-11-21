@@ -1,0 +1,48 @@
+{
+	"name":"Page script test App",
+	"description":"An example of to test page scripts",
+	"version":"1.0",
+	"uuid":"4a5d50cc-b9f1-4526-b356-5cb2d60e9467",
+
+	"rest_methods": [
+		{
+            "name":"offenseListFunction",
+            "url":"/offenseListFunction",
+            "method":"GET",
+            "argument_names":["context"]
+		}
+	],
+
+	"gui_actions": [
+		{
+			"id":"OffenseListToolbarButton",
+			"text":"My Button !",
+			"description":"My custom button !",
+			"icon":"static/images/bookmarks_small.png",
+			"rest_method":"offenseListFunction",
+			"javascript":"my_offense_toolbar_button_action(result)",
+			"groups":["OffenseListToolbar"]
+		},
+		{
+			"id":"OffenseSummaryToolbarButton",
+			"text":"My Button !",
+			"description":"My custom button !",
+			"icon":"static/images/bookmarks_small.png",
+			"javascript":"my_offense_toolbar_button_action(context)",
+			"groups":["OffenseSummaryToolbar"]
+		}
+	],
+
+	"page_scripts": [
+		{
+			"app_name":"SEM",
+			"page_id":"OffenseList",
+			"scripts":["static/js/custom_script.js"]
+		},
+		{
+			"app_name":"SEM",
+			"page_id":"OffenseSummary",
+			"scripts":["static/js/custom_script.js"]
+		}
+	]
+}

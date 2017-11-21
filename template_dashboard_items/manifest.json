@@ -1,0 +1,25 @@
+{
+    "name":"DashboardItems",
+    "description":"A sample app showing how to add a dashboard item containing user defined HTML",
+    "version":"1.0",
+    "uuid":"aaff161f-871a-435c-866b-c65b4ceca959",
+
+    "dashboard_items": [
+        {
+            "text":"Example Item",
+            "description":"Another Example dashboard item that is going to show some html",
+            "rest_method":"getExampleDashboardItem",
+            "required_capabilities":["ADMIN"]
+        }
+    ],
+
+    "rest_methods": [
+        {
+            "name":"getExampleDashboardItem",
+            "url":"/getExampleDashboardItem",
+            "method":"GET",
+            "argument_names":[],
+            "required_capabilities":["ADMIN"]
+        }
+    ]
+}
